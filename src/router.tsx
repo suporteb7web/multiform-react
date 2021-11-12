@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { FormStep1 } from './pages/FormStep1';
 import { FormStep2 } from './pages/FormStep2';
