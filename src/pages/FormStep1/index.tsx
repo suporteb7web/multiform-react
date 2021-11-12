@@ -1,11 +1,11 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as C from './styles';
 import { useForm, FormActions } from '../../contexts/FormContext';
 import { Theme } from '../../components/Theme';
 import { ChangeEvent, useEffect } from 'react';
 
 export const FormStep1 = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const { state, dispatch } = useForm();
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export const FormStep1 = () => {
 
     const handleNextStep = () => {
         if(state.name !== '') {
-            history.push('/step2');
+            navigate('/step2');
         } else {
             alert("Preencha os dados.");
         }
